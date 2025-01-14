@@ -1,5 +1,66 @@
-* {
-    margin: 0;
-    padding: auto;
-    background-color: bisque;
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&display=swap");
+html {
+  font-size: 100%;
+  box-sizing: border-box;
 }
+
+body {
+  margin: 0px;
+  padding: 0px;
+  min-height: 100vh;
+  font-family: "Open Sans", Arial, Helvetica, sans-serif;
+  background-color: lightblue;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+nav {
+  padding: 10px;
+}
+@media (min-width: 600px) {
+  nav {
+    padding: 20px;
+  }
+}
+
+a {
+  position: relative;
+  text-decoration: none;
+}
+
+a::before {
+  content: "";
+  position: absolute;
+  height: 3px;
+  right: 0px;
+  bottom: -3px;
+  left: 0px;
+  background-color: rgb(216, 29, 216);
+}
+
+a:hover {
+  color: rgb(216, 29, 216);
+}
+a:hover::before {
+  background: linear-gradient(to right, rgb(216, 29, 216) 40%, rgb(98, 16, 250) 75%);
+}
+
+nav.flexbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+nav.flexbox ul {
+  display: flex;
+  align-items: center;
+}
+nav.flexbox ul li {
+  margin-right: 20px;
+}
+nav.flexbox ul li:last-child {
+  margin-right: 0px;
+}/*# sourceMappingURL=app.css.map */
